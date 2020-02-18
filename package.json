@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "now dev --listen localhost:9911 & wait-on localhost:9911 & jest",
+    "test": "now dev --listen localhost:9911 & wait-on localhost:9911/index & jest",
     "dev": "now dev --listen localhost:9911",
     "test:output": "jest -w --collectCoverage --json --outputFile=results.json",
     "test:dev": "jest -w"
@@ -21,7 +21,7 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "now": "16.7.3",
+    "now": "17.0.3",
     "wait-on": "^4.0.0"
   }
 }
