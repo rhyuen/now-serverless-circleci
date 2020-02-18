@@ -3,8 +3,7 @@ jobs:
     build:
         working_directory: ~/appishere
         docker:
-            - image: circleci/node:12.9.0
-            - image: mongo:4.2.0
+            - image: circleci/node:12.9.0            
         steps:
             - checkout
             - run:
@@ -21,10 +20,8 @@ jobs:
                       - ./node_modules        
             - run:
                   name: test
-                  command: |
-                        sudo npm install -g now@latest
-                        sudo npm install -g wait-on@latest
-                        sudo npm test
+                  command: 
+                        npm test
             - store_artifacts:
                   path: test-results.xml
                   prefix: tests
