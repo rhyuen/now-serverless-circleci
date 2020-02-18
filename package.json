@@ -1,0 +1,23 @@
+{
+  "name": "nowfunctionsci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "now dev --listen 9911 & wait-on http://localhost:9911 & jest",
+    "dev": "now dev --listen 9911",
+    "test:output": "jest -w --collectCoverage --json --outputFile=results.json",
+    "test:dev": "jest -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@now/node": "^1.4.1",
+    "@types/jest": "^25.1.2",
+    "axios": "^0.19.2",
+    "jest": "^25.1.0",
+    "nock": "^11.8.2",
+    "supertest": "^4.0.2"
+  }
+}
