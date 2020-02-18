@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "now dev --listen 9911 & wait-on http://localhost:9911 & jest",
-    "dev": "now dev --listen 9911",
+    "test": "now dev --listen http://localhost:9911 & wait-on http://localhost:9911 & jest",
+    "dev": "now dev --listen http://localhost:9911",
     "test:output": "jest -w --collectCoverage --json --outputFile=results.json",
     "test:dev": "jest -w"
   },
