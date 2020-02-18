@@ -21,6 +21,7 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "now": "^17.0.3"
+    "now": "^17.0.3",
+    "wait-on": "^4.0.0"
   }
 }
