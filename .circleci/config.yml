@@ -18,15 +18,13 @@ jobs:
             - save_cache:
                   key: dependency-cache-{{ checksum "package-lock.json" }}
                   paths:
-                      - ./node_modules
+                      - ./node_modules        
             - run:
-                  name: install-now-and-wait-on
+                  name: test
                   command: |
                         sudo npm install -g now@latest
                         sudo npm install -g wait-on@latest
-            - run:
-                  name: test
-                  command: npm test
+                        npm test
             - store_artifacts:
                   path: test-results.xml
                   prefix: tests
