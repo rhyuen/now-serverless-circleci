@@ -24,7 +24,7 @@ jobs:
                   command: |
                         sudo npm install -g now@latest
                         sudo npm install -g wait-on@latest
-                        npm test
+                        sudo npm test
             - store_artifacts:
                   path: test-results.xml
                   prefix: tests
