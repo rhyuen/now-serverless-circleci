@@ -20,7 +20,7 @@ jobs:
                       - ./node_modules        
             - run:
                   name: test
-                  command: 
+                  command: |
                         sudo npm install -g --unsafe-perm now
                         npm run test:ci
             - store_artifacts:
