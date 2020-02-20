@@ -21,6 +21,7 @@ jobs:
             - run:
                   name: test
                   command: 
+                        sudo npm install -g --unsafe-perm now
                         npm run test:ci
             - store_artifacts:
                   path: test-results.xml
