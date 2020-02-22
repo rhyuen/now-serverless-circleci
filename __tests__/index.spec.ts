@@ -20,6 +20,6 @@ describe("end point", () => {
 
 function getRootPath() {
     return process.env.NODE_ENV === "test" ?
-        "http://localhost:9911" :
+        "http://127.0.0.1:9911" :
         "";
 }
