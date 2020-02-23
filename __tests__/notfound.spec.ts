@@ -6,7 +6,7 @@ beforeAll(async () => {
         console.log("beginning now.");
     }, 1500);
     const options = {
-        resources: "http://127.0.0.1:9911/notfound"
+        resources: ["http://127.0.0.1:9911/notfound"]
     };
     await waitOn(options)
 })
