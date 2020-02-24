@@ -16,5 +16,6 @@ An attempt at using `CircleCI` with Zeit's `Now` and `Typescript`.
 
 > 3. Adding the `.now` folder fields to the CircleCI build environment to make the 'project not linked to NOW' error field go away.
 
+> 4. Found this [link](https://discuss.circleci.com/t/cant-connect-to-node-http-server-running-on-localhost/19857/8) that gets an ip address.  It looks promising.
 
 # Resolved Issues

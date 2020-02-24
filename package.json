@@ -22,6 +22,7 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "ip": "^1.1.5",
     "now": "^17.0.4",
     "wait-on": "^4.0.0"
   }
