@@ -19,6 +19,9 @@ jobs:
                   paths:
                       - ./node_modules        
             - run:
+                  name: portinfo
+                  command: netstat
+            - run:
                   name: test
                   command: |
                         sudo npm install -g --unsafe-perm now
