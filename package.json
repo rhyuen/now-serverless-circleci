@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test now dev --listen 9911 & wait-on 127.0.0.1:9911/index & jest",
-    "test:ci": "NODE_ENV=ci now dev --debug --listen 9911 --token $CIRCLECI_NOW_TOKEN & wait-on 127.0.0.1:9911/index & jest --collectCoverage --json --outputFile=results.json",
+    "test": "NODE_ENV=test now dev --listen 9911 & wait-on tcp:9911 & jest",
+    "test:ci": "NODE_ENV=ci now dev --debug --listen 9911 --token $CIRCLECI_NOW_TOKEN & wait-on tcp:9911 & jest --collectCoverage --json --outputFile=results.json",
     "dev": "now dev --listen 9911",
     "test:output": "NODE_ENV=ci jest -w --collectCoverage --json --outputFile=results.json",
     "test:dev": "NODE_ENV=dev jest -w"
@@ -22,6 +22,7 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "@types/ip": "^1.1.0",
     "ip": "^1.1.5",
     "now": "^17.0.4",
     "wait-on": "^4.0.0"
