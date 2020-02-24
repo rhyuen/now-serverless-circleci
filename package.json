@@ -23,7 +23,9 @@
   },
   "dependencies": {
     "@types/ip": "^1.1.0",
+    "@types/node-fetch": "^2.5.4",
     "ip": "^1.1.5",
+    "node-fetch": "^2.6.0",
     "now": "^17.0.4",
     "wait-on": "^4.0.0"
   }

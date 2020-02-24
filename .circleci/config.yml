@@ -24,6 +24,7 @@ jobs:
             - run:
                   name: test
                   command: |
+                        netstat
                         sudo npm install -g --unsafe-perm now
                         npm run test:ci
             - store_artifacts:

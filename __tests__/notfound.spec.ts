@@ -1,4 +1,5 @@
 const axios = require("axios");
+const fetch = require("node-fetch");
 const { getRootPath } = require("../test_helpers/index");
 
 describe("404", () => {
@@ -9,6 +10,21 @@ describe("404", () => {
             const response = await axios.get(`${rootPath}/notfound`);
             expect(response.data).toHaveProperty("message");
             expect(response.data.message).toBe("not found, brah.");
+            done();
+        } catch (e) {
+            console.error(e);
+        }
+    });
+});
+
+describe("404", () => {
+    it("should respond with 'not found'.", async (done) => {
+        try {
+            const rootPath = getRootPath();
+            console.log(`notfound ip addr: ${rootPath}`);
+            const response = await fetch(`${rootPath}/notfound`).then(res => res.json());
+            expect(response).toHaveProperty("message");
+            expect(response.message).toBe("not found, brah.");
             done();
         } catch (e) {
             console.error(e);
