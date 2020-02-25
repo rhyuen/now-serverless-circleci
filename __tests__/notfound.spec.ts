@@ -1,6 +1,11 @@
 const axios = require("axios");
 const fetch = require("node-fetch");
 const { getRootPath } = require("../test_helpers/index");
+const jest = require('jest');
+
+beforeEach(async () => {
+    jest.setTimeout(30000);
+})
 
 describe("axios 404", () => {
     it("should respond with 'not found'.", async (done) => {
@@ -13,6 +18,7 @@ describe("axios 404", () => {
             done();
         } catch (e) {
             console.error(e);
+            done(e);
         }
     });
 });
@@ -28,6 +34,7 @@ describe("fetch 404", () => {
             done();
         } catch (e) {
             console.error(e);
+            done(e);
         }
     });
 });

@@ -1,7 +1,11 @@
 const axios = require("axios");
 const fetch = require("node-fetch");
 const { getRootPath } = require("../test_helpers/index.ts");
+const jest = require("jest");
 
+beforeEach(async () => {
+    jest.setTimeout(30000);
+})
 
 describe("test index", () => {
     test("it should return 200", (done) => {
@@ -22,6 +26,7 @@ describe("axios end point", () => {
             done();
         } catch (e) {
             console.error(e);
+            done(e);
         }
     });
 });
@@ -38,6 +43,7 @@ describe("fetch end point", () => {
             done();
         } catch (e) {
             console.error(e);
+            done(e);
         }
     });
 });
