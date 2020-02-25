@@ -1,7 +1,6 @@
 const axios = require("axios");
 const fetch = require("node-fetch");
 const { getRootPath } = require("../test_helpers/index.ts");
-const jest = require("jest");
 
 beforeEach(async () => {
     jest.setTimeout(30000);
