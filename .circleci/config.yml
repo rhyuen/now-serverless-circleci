@@ -26,7 +26,8 @@ jobs:
                   command: |
                         netstat
                         sudo npm install -g --unsafe-perm now
-                        npm run test
+                        npm run start:ci
+                        npm run test:ci
             - store_artifacts:
                   path: test-results.xml
                   prefix: tests
