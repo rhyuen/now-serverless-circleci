@@ -21,3 +21,9 @@ An attempt at using `CircleCI` with Zeit's `Now` and `Typescript`.
 > 4. Found this [link](https://discuss.circleci.com/t/cant-connect-to-node-http-server-running-on-localhost/19857/8) that gets an ip address.  It looks promising.
 
 # Resolved Issues
+
+SOLN:
+32 commits later and it works.
+You need two commands instead of one.
+> $ now dev --listen 8080 & wait-on tcp:8080
+> $ npm run test
