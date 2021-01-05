@@ -17,7 +17,7 @@
   "devDependencies": {
     "@now/node": "^1.4.1",
     "@types/jest": "^25.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "jest": "^25.1.0",
     "nock": "^11.8.2",
     "supertest": "^4.0.2"
